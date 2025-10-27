@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Landing Page</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Landing page CV sederhana menggunakan Tailwind CSS (CDN)">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-20 bg-white/80 backdrop-blur border-b">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#hero" class="font-bold text-lg">CV Saya</a>
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        <li><a href="#tentang" class="hover:text-blue-600">Tentang</a></li>
+        <li><a href="#pendidikan" class="hover:text-blue-600">Pendidikan</a></li>
+        <li><a href="#pengalaman" class="hover:text-blue-600">Pengalaman</a></li>
+        <li><a href="#keahlian" class="hover:text-blue-600">Keahlian</a></li>
+        <li><a href="#kontak" class="hover:text-blue-600">Kontak</a></li>
+      </ul>
+      <a href="#kontak" class="inline-flex md:hidden items-center justify-center rounded-xl px-4 py-2 text-sm font-medium bg-blue-600 text-white hover:bg-blue-700">Hubungi</a>
+    </nav>
+  </header>
+
+  <!-- HERO (Foto kiri, teks kanan) -->
+<section id="hero" class="relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <!-- Image (Kiri) -->
+      <div class="md:col-span-5">
+        <div class="relative">
+          <img src="images/cvfoto.jpeg" alt="Foto profil" class="w-full max-w-sm mx-auto rounded-2xl shadow-lg object-cover">
+          <div class="absolute -bottom-4 -right-4 hidden md:block bg-white rounded-xl shadow p-3">
+            <div class="text-xs text-gray-500">Status</div>
+            <div class="text-sm font-semibold text-green-600">Tersedia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text (Kanan) -->
+      <div class="md:col-span-7">
+        <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+          Halo, saya <span class="text-blue-600">Nikita Ramadhania</span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Information Systems Student | Enthusiastic About Data, Web Development, and System Analysis
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#keahlian" class="inline-flex items-center justify-center rounded-xl px-4 py-2 bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700">
+            Lihat Keahlian
+          </a>
+          <a href="#pengalaman" class="inline-flex items-center justify-center rounded-xl px-4 py-2 border border-blue-600 text-blue-600 text-sm font-semibold hover:bg-blue-50">
+            Pengalaman
+          </a>
+        </div>
+
+        <!-- Quick facts -->
+        <div class="mt-8 flex flex-wrap gap-6 text-sm">
+          <div class="flex items-center gap-3">
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Tentang Saya -->
+  <section id="tentang" class="bg-white border-y">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-bold">Tentang Saya</h2>
+      <p class="mt-4 text-gray-600 leading-relaxed">Halo, saya Nikita Ramadhania Saya adalah mahasiswa Sistem Informasi Universitas Gunadarma dengan minat pada web development, data analysis, dan manajemen sistem informasi. Memiliki pengalaman dalam pengembangan aplikasi berbasis web serta implementasi database. Terampil dalam problem solving, analisis sistem, dan kolaborasi tim untuk menghasilkan solusi yang efektif dan inovatif.</p>
+      
+      <!-- List (unordered + ordered) -->
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold">Fokus Saat Ini</h3>
+          <ul class="list-disc pl-5 mt-3 text-gray-700 space-y-2">
+            <li>Pengembangan tampilan web yang responsif dan mudah digunakan</li>
+            <li>Pembuatan struktur antarmuka yang rapi dan konsisten</li>
+            <li>Peningkatan kualitas serta kerapian kode dalam proyek web</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold">Minat Belajar</h3>
+          <ul class="list-decimal pl-5 mt-3 text-gray-700 space-y-2">
+            <li>Pengenalan sistem terdistribusi dalam pengelolaan data</li>
+            <li>Optimalisasi performa database dalam aplikasi web</li>
+             <li>Data analysis dan dasar-dasar machine learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pendidikan (Table) -->
+  <section id="pendidikan" class="bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-bold">Pendidikan</h2>
+      <div class="overflow-x-auto mt-6">
+        <table class="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-3 text-left">Institusi</th>
+              <th class="px-4 py-3 text-left">Program</th>
+              <th class="px-4 py-3 text-left">Tahun</th>
+              <th class="px-4 py-3 text-left">Keterangan</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y">
+            <tr class="hover:bg-white">
+              <td class="px-4 py-3">Universitas Gunadarma</td>
+              <td class="px-4 py-3">Sistem Informasi</td>
+              <td class="px-4 py-3">2023-2027</td>
+              <td class="px-4 py-3">Masih Berkuliah</td>
+            </tr>
+            <tr class="hover:bg-white">
+              <td class="px-4 py-3">SMA Negeri 8 Kota Tangerang</td>
+              <td class="px-4 py-3">MIPA</td>
+              <td class="px-4 py-3">2019-2023</td>
+              <td class="px-4 py-3">Lulus</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="pengalaman" class="max-w-6xl mx-auto mt-10 px-6">
+  <h2 class="text-2xl font-semibold text-gray-800 mb-4">Pengalaman</h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Card 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Asisten Laboratorium Sistem Informasi</h3>
+          <p class="text-gray-600">Universitas Gunadarma • 2024 – 2025</p>
+        </div>
+        <span class="bg-blue-100 text-blue-700 text-sm font-medium px-3 py-1 rounded-lg">Tutor</span>
+      </div>
+
+      <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>Membimbing mahasiswa melalui materi praktikum dan demonstrasi langsung.</li>
+        <li> Memberikan penjelasan mendalam mengenai konsep teknis dan penerapannya dalam konteks praktikum secara jelas dan interaktif.</li>
+        <li>Membantu mahasiswa dalam pemecahan masalah selama kegiatan laboratorium dan tugas praktik.</li>
+        <li>Mendorong partisipasi aktif mahasiswa serta mendukung kemajuan belajar secara individu maupun kelompok.</li>
+      </ul>
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Intern – Human Resources</h3>
+          <p class="text-gray-600">PT Aulia Cosmetic Indonesia • Juli – September 2025</p>
+        </div>
+        <span class="bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded-lg">Magang</span>
+      </div>
+
+      <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>Membantu proses rekrutmen seperti menyaring CV dan menjadwalkan wawancara.</li>
+        <li>Mengelola entri data karyawan dan pengarsipan dokumen untuk keperluan administrasi HR.</li>
+        <li>Membantu mengorganisir sesi pelatihan internal dan memantau daftar peserta.</li>
+      </ul>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Organisasi / Volunteer -->
+<section id="organisasi" class="max-w-6xl mx-auto mt-10 px-6">
+  <h2 class="text-2xl font-semibold text-gray-800 mb-4"> Organisasi & Volunteer</h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Card 1: TechnoFair -->
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Volunteer — Divisi Humas</h3>
+          <p class="text-gray-600">TechnoFair Universitas Gunadarma • 2025</p>
+        </div>
+        <span class="bg-pink-100 text-pink-700 text-sm font-medium px-3 py-1 rounded-lg">Volunteer</span>
+      </div>
+
+      <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>Bertanggung jawab dalam menjalin komunikasi dengan pihak eksternal dan peserta acara.</li>
+        <li>Mengelola publikasi dan promosi event melalui media sosial serta membantu penyusunan konten informasi publik.</li>
+        <li>Berkoordinasi dengan divisi lain untuk memastikan kelancaran publikasi dan hubungan eksternal selama acara berlangsung.</li>
+        <li>Menjadi bagian dari tim yang mendukung kelancaran acara TechnoFair 12.0 yang diselenggarakan oleh Departemen Akademik BEM FIKTI UG.</li>
+      </ul>
+    </div>
+
+    <!-- Card 2: Melukis Mimpi -->
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Volunteer — Tim Humas & Dokumentasi</h3>
+          <p class="text-gray-600">Acara Melukis Mimpi • 2024</p>
+        </div>
+        <span class="bg-pink-100 text-pink-700 text-sm font-medium px-3 py-1 rounded-lg">Volunteer</span>
+      </div>
+
+      <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>Terlibat sebagai tim humas dan dokumentasi dalam kegiatan sosial “Melukis Mimpi”.</li>
+        <li>Mengabadikan momen kegiatan dan membantu publikasi kegiatan melalui media sosial.</li>
+        <li>Berkolaborasi dengan tim untuk menciptakan suasana hangat dan penuh kebahagiaan bagi anak-anak panti asuhan.</li>
+        <li>Berpartisipasi dalam kegiatan interaktif seperti menggambar, berbagi cerita, dan memberikan motivasi kepada anak-anak.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Keahlian (Lists + Badges) -->
+  <section id="keahlian" class="bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-bold">Keahlian</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-semibold">Bahasa & Framework</h3>
+          <ul class="mt-3 flex flex-wrap gap-2">
+            <li class="px-3 py-1 rounded-full bg-white border text-sm">Pyhton</li>
+            <li class="px-3 py-1 rounded-full bg-white border text-sm">PHP</li>
+            <li class="px-3 py-1 rounded-full bg-white border text-sm">SQL</li>
+            <li class="px-3 py-1 rounded-full bg-white border text-sm">C/Java (dasar)</li>
+            <li class="px-3 py-1 rounded-full bg-white border text-sm">Excel</li>
+            <li class="px-3 py-1 rounded-full bg-white border text-sm">Word</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold">Soft Skills</h3>
+          <ul class="list-disc pl-5 mt-3 text-gray-700 space-y-2">
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Kemampuan problem solving dan komunikasi yang baik</li>
+                <li>Manajemen waktu dan kolaborasi yang efektif</li>
+                 <li>Mampu bekerja dengan baik dalam tim</li>
+                </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-bold">Kontak</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-3 text-sm">
+          <p>Silakan hubungi saya untuk kolaborasi atau peluang kerja.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100">📧</span>
+              <a class="hover:underline" href="mailto:ramadhanianikita3@gmail.com">ramadhanianikita3@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-3"><span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100">🔗</span><a class="hover:underline" href="https://www.linkedin.com/in/nikita-ramadhania/" target="_blank" rel="noreferrer">LinkedIn></li>
+          </ul>
+        </div>
+        <!-- Simple contact card (Flex) -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-xs text-gray-500">
+    <p>&copy; <span id="y"></span> Nikita Ramadhania</p>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
